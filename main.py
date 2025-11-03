@@ -47,7 +47,12 @@ def handle_message(message):
     uz = translate_text(text, "en", "uz")
     kaa = translate_text(text, "en", "kaa")
 
-    result = f"🇺🇸 English: {text}\n\n🇺🇿 Uzbek: {uz}\n\n🏴 Qaraqalpaq: {kaa}"
+    result = (
+        f"🇺🇸 English: {text}\n\n"
+        f"🇺🇿 Uzbek: {uz}\n\n"
+        f"🏴 Qaraqalpaq: {kaa}"
+    )
+
     bot.send_message(message.chat.id, result)
 
 print("🤖 Bot ishga tushdi...")
