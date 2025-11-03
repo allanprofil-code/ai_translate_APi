@@ -2,8 +2,8 @@ import telebot
 import requests
 import os
 
-BOT_TOKEN = os.getenv("8439525451:AAEX7rNJm1YByVN0Gslf48T4-PfG21T2TAs")
-TILMOCH_API_KEY = os.getenv("th_8a4a73d1-07ad-4b3b-932a-0d2a8a2fc4d5")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+TILMOCH_API_KEY = os.getenv("TILMOCH_API_KEY")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
