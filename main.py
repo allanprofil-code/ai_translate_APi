@@ -7,7 +7,7 @@ TILMOCH_API_KEY = os.getenv("th_8a4a73d1-07ad-4b3b-932a-0d2a8a2fc4d5")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
-def translate_text(text, source_lang="en", target_lang="ka"):
+def translate_text(text, source_lang="en", target_lang="kaa"):
     url = "https://tilmoch.ai/api/translate"
     payload = {
         "text": text,
@@ -45,9 +45,9 @@ def handle_message(message):
     bot.reply_to(message, "⏳ Tarjima qilinmoqda...")
 
     uz = translate_text(text, "en", "uz")
-    kaa = translate_text(text, "en", "ka")
+    kaa = translate_text(text, "en", "kaa")
 
-    result = f"🇺🇸 English: {text}\n\n🇺🇿 Uzbek: {uz}\n\n🏴 Qaraqalpaq: {ka}"
+    result = f"🇺🇸 English: {text}\n\n🇺🇿 Uzbek: {uz}\n\n🏴 Qaraqalpaq: {kaa}"
     bot.send_message(message.chat.id, result)
 
 print("🤖 Bot ishga tushdi...")
